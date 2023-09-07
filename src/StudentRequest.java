@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Student {
+public class StudentRequest {
 
     private String name;
     private float grade;
@@ -31,24 +31,21 @@ public class Student {
         this.courses = courses;
     }
 
-    // method to add courses
     public void addCourse(String courseName) {
 
         courses.add(courseName);
         System.out.println("Course Added!");
     }
 
-    // method to remove courses
     public void removeCourse(int courseIndex) {
 
         courses.remove(courseIndex);
         System.out.println("Course removed!");
     }
 
-
     @Override
     public String toString() {
-        return "Student{" +
+        return "StudentRequest{" +
                 "name='" + name + '\'' +
                 ", grade=" + grade +
                 ", courses=" + courses +
