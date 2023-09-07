@@ -8,7 +8,7 @@ public class Main {
         request1.setGrade(3.00f);
 
         StudentRequest request2 = new StudentRequest();
-        request2.setName("Nan");
+        request2.setName("Nan8");
         request2.setGrade(4.00f);
 
         // add courses
@@ -37,18 +37,22 @@ public class Main {
 
         if (request.getName() == null) {
             System.out.println("Please re-enter name.");
+            return null;
         }
 
         if (!request.getName().matches("[a-zA-Z]+")) {
             System.out.println("Please enter a proper name.");
+            return null;
         }
 
         if (request.getGrade() <= 0.00f || request.getGrade() > 4.00f) {
             System.out.println("Please enter a proper grade.");
+            return null;
         }
 
         if (request.getCourses() == null) {
             System.out.println("Please enter a proper course.");
+            return null;
         }
 
         Student student = new Student();
